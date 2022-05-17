@@ -1,0 +1,134 @@
+/* ***********************ROOT***************************** */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#page{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    background-color: #EDF2F8;
+}
+/* ***********************Layout***************************** */
+.daniel {
+    grid-area: dan;
+    background-color: hsl(263, 55%, 52%) !important;
+    width: 800px;
+    background: url("./images/bg-pattern-quotation.svg") no-repeat;
+    background-position: 600px 0px; 
+}
+
+.jonathan {
+    grid-area: jon;
+    background-color: hsl(217, 19%, 35%);
+    width: 350px;
+}
+
+
+.kira {
+    grid-area: kir;
+    background-color: hsl(0, 0%, 100%);
+    width: 350px;
+    box-shadow: 28px 24px 33px 3px rgba(0,0,0,0.1);
+}
+
+.jeannette {
+    grid-area: jan;
+    background-color: hsl(0, 0%, 100%);
+    width: 350px;
+    box-shadow: 28px 24px 33px 3px rgba(0,0,0,0.1);
+}
+
+.patrick {
+    grid-area: pat;
+    background-color: hsl(219, 29%, 14%);
+    width: 800px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-areas: 
+                        "dan dan jon kir"
+                        "jan pat pat kir";
+    padding: 10px;
+    grid-gap: 40px;
+    width: 1500px;
+    height: 750px;
+}
+
+.wrapper > div {
+    border-radius: 8px;
+    padding: 36px;
+
+}
+/* *************************Content***************************** */
+
+.wrapper > div > div > img {
+    border-radius: 50%;
+    
+}
+
+.wrapper > div > div {
+    display: flex;
+    align-items: center;
+}
+
+.wrapper > div > div > div {
+    margin-left: 25px;
+}
+
+.wrapper > div > div > div > h4 {
+    color: rgba(255, 255, 255, 1);
+}
+
+.wrapper > div > div > div > h5 {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.wrapper > div > h2 {
+    margin: 20px 0;
+    color: white;
+}
+
+.wrapper > div > p {
+    margin: 20px 0;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/*********************Media Queries *******************************/
+
+@media  (max-width: 768px) {
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        height: 1700px;
+        width: 500px;
+    }
+    .daniel {
+        width: 400px;
+        background: url("./images/bg-pattern-quotation.svg") no-repeat;
+        background-position: 200px 0px; 
+    }
+    
+    .jonathan {
+        width: 400px;
+    }
+    
+    
+    .kira {
+        width: 400px;
+    }
+    
+    .jeannette {
+        width: 400px;
+    }
+    
+    .patrick {
+        width: 400px;
+    }
+  }
